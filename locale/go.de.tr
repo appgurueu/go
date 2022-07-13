@@ -1,0 +1,18 @@
+# textdomain: go
+Go Board=Go-Brett
+Infinite Black Go Stones=Unendliche schwarze Go-Steine
+Infinite White Go Stones=Unendliche weiße Go-Steine
+Score=Auszählen
+Resume=Wieder aufnehmen
+Pass=Passen
+Resign=Aufgeben
+Reset=Zurücksetzen
+Make a move to enter the game=Mach einen Zug, um ins Spiel einzusteigen
+Black to play=Schwarz am Zug
+White to play=Weiß am Zug
+Mark captured groups=Markiere gefangene Gruppen
+Black wins (White resigned)=Schwarz gewinnt (Weiß hat aufgegeben)
+White wins (Black resigned)=Weiß gewinnt (Schwarz hat aufgegeben)
+Black wins @1 to @2=Schwarz gewinnt @1 zu @2
+White wins @1 to @2=Weiß gewinnt @1 zu @2
+Draw (@1 each)=Unentschieden (@1 beide)

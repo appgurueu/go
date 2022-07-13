@@ -1,0 +1,18 @@
+# textdomain: go
+Go Board=
+Infinite Black Go Stones=
+Infinite White Go Stones=
+Score=
+Resume=
+Pass=
+Resign=
+Reset=
+Make a move to enter the game=
+Black to play=
+White to play=
+Mark captured groups=
+Black wins (White resigned)=
+White wins (Black resigned)=
+Black wins @1 to @2=
+White wins @1 to @2=
+Draw (@1 each)=
