@@ -1,4 +1,4 @@
-local Game = modlib.mod.include"game.lua"
+local Game = go.game
 
 local T, models, textures, conf = go.T, go.models, go.textures, go.conf
 

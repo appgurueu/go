@@ -5,13 +5,14 @@
 ]]
 
 local modname = minetest.get_current_modname()
-local base_path = minetest.get_modpath(modname)
+local modpath = minetest.get_modpath(modname)
+local srcpath = modpath .. "/source"
 local strs = {}
-local filenames = minetest.get_dir_list(base_path, false)
+local filenames = minetest.get_dir_list(srcpath , false)
 table.sort(filenames)
 for _, filename in ipairs(filenames) do
 	if filename:match"%.lua$" then
-		local lua = modlib.file.read(base_path .. "/" .. filename)
+		local lua = modlib.file.read(srcpath .. "/" .. filename)
 		for str in lua:gmatch[[%W[TS]%s*%(?%s*(".-[^\]")]] do
 			str = setfenv(assert(loadstring("return"..str)), {})():gsub(".", {
 				["\n"] = "@n",
@@ -23,7 +24,7 @@ for _, filename in ipairs(filenames) do
 	end
 end
 
-local locale_path = base_path .. "/locale"
+local locale_path = modpath .. "/locale"
 for _, filename in ipairs(minetest.get_dir_list(locale_path, false)) do
 	local filepath = locale_path .. "/" .. filename
 	local lines = {}
