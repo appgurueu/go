@@ -3,7 +3,7 @@ go = {}
 go.T = minetest.get_translator"go"
 
 local function load(name)
-	go[name] = assert(loadfile(modlib.mod.get_resource(name .. ".lua")))()
+	go[name] = modlib.mod.include(name .. ".lua")
 end
 
 load"conf"
