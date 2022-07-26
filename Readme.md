@@ -86,7 +86,7 @@ Another limitation is that no settings (or defaults) can be forced by a mod or g
 * *Entity selectionboxes should be hidden* (`show_entity_selectionbox = false`); if entity highlighting is used, it should *not be set to halo*, but rather to *outline* (`node_highlighting = box`) as to not obstruct the view on the board
 * *Smooth GUI image scaling* should be enabled (`gui_scaling_filter = true`)
 * Enable *trilinear texture filtering* (`trilinear_filter = true`), *mipmapping* (`mip_map = true`) & *anisotropic filtering* (`anisotropic_filter = true`) for smoother board appearance
-* **Consider** enabling *multi-sample anti-aliasing* (`msaa = 2`) for smooth board edges **if it doesn't [trigger a nasty rendering bug](https://github.com/minetest/minetest/issues/9072) on your setup**
+* **Consider** enabling *multi-sample anti-aliasing* (`fsaa = 2`) for smooth board edges **if it doesn't [trigger a nasty rendering bug](https://github.com/minetest/minetest/issues/9072) on your setup**
 
 You can set these settings by adding the following lines at the end of your configuration file (`minetest.conf`):
 
