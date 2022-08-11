@@ -110,8 +110,10 @@ function board:on_punch(puncher, _, tool_capabilities)
 		local item = ItemStack(("go:board_%dx%d"):format(board_size, board_size))
 		local meta = item:get_meta()
 		meta:set_string("go_staticdata", self:get_staticdata())
-		meta:set_string("description",
-			("%s - %s vs %s"):format(item:get_description(), game.players.B or "?", game.players.W or "?"))
+		local B, W = game.players.B or "?", game.players.W or "?"
+		meta:set_string("description", ("%s - %s vs %s"):format(item:get_description(), B, W))
+		meta:set_string("count_meta", B:sub(1, 1):upper() .. "-" .. W:sub(1, 1):upper())
+		meta:set_int("count_alignment", 2 + 2 * 4) -- centered
 		self:_close_formspecs()
 		self.object:remove()
 		puncher:set_wielded_item(item)
